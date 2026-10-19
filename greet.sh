@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
-# Starter version: empty input is not handled yet.
 name=${1:-}
+if [[ -z "$name" ]]; then
+    echo 'name required' >&2
+    exit 1
+fi
 echo "Hello, $name!"
