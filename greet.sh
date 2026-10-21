@@ -4,4 +4,5 @@ if [[ -z "$name" ]]; then
     echo 'name required' >&2
     exit 1
 fi
-echo "Hello, $name!"
+prefix=${2:-Hello}
+echo "$prefix, $name!"
